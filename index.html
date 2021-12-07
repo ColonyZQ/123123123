@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detective-VK | Поиск компромата в сети</title>
+    <!-- Google Font -->
+    <link href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/css_002.css" rel="stylesheet" type="text/css">
+
+    <link href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/css.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap -->
+    <link href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/bootstrap.css" rel="stylesheet">
+
+    <!-- Owl Carousel Assets -->
+    <link href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/owl.css" rel="stylesheet">
+    <link href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/owl_002.css" rel="stylesheet">
+
+    <!-- Pixeden Icon Font -->
+    <link rel="stylesheet" href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/Pe-icon-7-stroke.css">
+
+    <!-- Font Awesome -->
+    <link href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/font-awesome.css" rel="stylesheet">
+
+    <!-- PrettyPhoto -->
+    <link href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/prettyPhoto.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="http://vkauth.ru/assets/f9A11jNdzD/images/vklogo.png">
+
+    <!-- Style -->
+    <link href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/style.css" rel="stylesheet">
+
+    <link href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/animate.css" rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link href="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/responsive.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+
+<body>
+    <!-- PRELOADER -->
+    <div class="spn_hol" style="display: none;">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+ <!-- END PRELOADER -->
+
+ <!-- =========================
+     START ABOUT US SECTION
+============================== -->
+    <section class="header parallax home-parallax page" id="HOME" style="background-position: 50% 0px;">
+        <h2></h2>
+        <div class="section_overlay">
+
+
+            <div class="container home-container" style="padding-top: 32px; padding-bottom: 32px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo text-center">
+                                <!-- LOGO -->
+                            <img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/logo.png" alt="" width="125" height="55">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-8">
+                        <div class="home_text">
+                            <!-- TITLE AND DESC -->
+                            <h1>Поиск компрометирующего материала во ВКонтакте</h1>
+                            <p>По ститистике на каждого 3-го человека есть компромат </p>
+
+                            <div class="download-btn">
+                            <!-- BUTTON -->
+                                <a class="btn home-btn wow fadeInLeft animated" href="#SEARCH" style="visibility: visible; animation-name: fadeInLeft;">Проверить</a>
+                                <a class="tuor btn wow fadeInRight animated" href="#ABOUT" style="visibility: visible; animation-name: fadeInRight;">Подробнее <i class="fa fa-angle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1 col-sm-4">
+                        <div class="home-iphone">
+                            <img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/iPhone_Home.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END HEADER SECTION -->
+
+
+
+
+ <!-- =========================
+     START ABOUT US SECTION
+============================== -->
+
+
+    <section class="about page" id="ABOUT">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <!-- ABOUT US SECTION TITLE-->
+                    <div class="section_title">
+                        <h2>О сервисе</h2>
+                        <p>Наш сервис поможет Вам проверить есть ли 
+компромат на Вас в сети, если есть, то поможет удалить. Это абсолютно 
+бесплатно и безопасно!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="inner_about_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about_phone wow fadeInLeft animated" data-wow-duration="1s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                        <!-- PHONE -->
+                            <img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/about_iphone.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6  wow fadeInRight animated" data-wow-duration="1s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInRight;">
+                        <!-- TITLE -->
+                        <div class="inner_about_title">
+                            <h2>Как данные появились<br> в сети?</h2>
+                            <p>Мы сами не замечая этого оставляем много 
+информации о себе, а так же к Вашему аккаунту могли получить доступ 
+злоумышленники. Например:</p>
+                        </div>
+                        <div class="inner_about_desc">
+
+                            <!-- SINGLE DESC -->
+                            <div class="single_about_area fadeInUp wow animated" data-wow-duration=".5s" data-wow-delay="1s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 1s; animation-name: fadeInUp;">
+                                <!-- ICON -->
+                                <div><i class="pe-7s-signal"></i></div>
+                                <!-- HEADING DESCRIPTION -->
+                                <h3>Бесплатный Wi-Fi</h3>
+                                <p>Вы хоть раз использовали бесплатный Wi-Fi? Да? Значит злоумышленники могли украсть все данные с Вашего устройства.</p>
+                            </div>
+                            <!-- END SINGLE DESC -->
+
+
+                            <!-- SINGLE DESC -->
+                            <div class="single_about_area fadeInUp wow animated" data-wow-duration=".5s" data-wow-delay="1.5s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 1.5s; animation-name: fadeInUp;">
+                                <!-- ICON -->
+                                <div><i class="pe-7s-cloud-download"></i></div>
+                                <!-- HEADING DESCRIPTION -->
+                                <h3>Вредоносное ПО</h3>
+                                <p>Вы могли случайно установить вирус, просто скачав какой-нибудь файл на свое устройство</p>
+                            </div>
+                            <!-- END SINGLE DESC -->
+
+
+                            <!-- SINGLE DESC -->
+                            <div class="single_about_area fadeInUp wow animated" data-wow-duration=".5s" data-wow-delay="2s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 2s; animation-name: fadeInUp;">
+                                <!-- ICON -->
+                                <div><i class="pe-7s-id"></i></div>
+                                <!-- HEADING DESCRIPTION -->
+                                <h3>Недобросовестные сотрудники</h3>
+                                <p>Сотрудники какого либо оператора могли продать Ваши данные.</p>
+                            </div>
+                            <!-- END SINGLE DESC -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 wow fadeInLeftBig animated" style="visibility: visible; animation-name: fadeInLeftBig;">
+                    <!-- VIDEO LEFT TITLE -->
+                        <div class="video_title">
+                            <h2>Будте на чеку<br>хакеры рядом</h2>
+                            <p>Около 60% пользователей заявляют о том, 
+что сталкивались с проблемами безопасности данных в социальных сетях. 
+Чаще всего, это проблемы кражи пароля (26%) и взлома аккаунта (69,2%). 
+При этом, чуть более 86% опрошенных отметили, что при взломе мошенник 
+воровал их личные данные, а затем шантожировал.</p>
+                        </div>
+                        <div class="video-button">
+                            <!-- BUTTON -->
+                            <a class="btn btn-primary btn-video" href="#FEATURES" role="button">Что может случиться с данными?</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInRightBig animated" style="visibility: visible; animation-name: fadeInRightBig;">
+                         <!-- VIDEO -->
+                        <div class="video">
+							<div class="fluid-width-video-wrapper" style="padding-top: 56.25%;"><iframe src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/uj_aQZs20Og.htm" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" id="fitvid462904" frameborder="0"></iframe></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Us -->
+
+
+
+
+ <!-- =========================
+     START TESTIMONIAL SECTION
+============================== -->
+
+    <section id="TESTIMONIAL" class="testimonial parallax">
+        <div class="section_overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 wow bounceInDown" style="visibility: hidden; animation-name: none;">
+                        <div id="carousel-example-caption-testimonial" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-caption-testimonial" data-slide-to="0" class=""></li>
+                                <li data-target="#carousel-example-caption-testimonial" data-slide-to="1" class="active"></li>
+                                <li data-target="#carousel-example-caption-testimonial" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <!-- IMAGE -->
+                                                <img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/client_1.png" alt="">
+                                                <div class="testimonial_caption">
+                                                   <!-- DESCRIPTION -->
+                                                    <h2>Виолетта Миллер</h2>
+                                                    <h4><span>Ссылки скрыты из-за</span> конфиденциальности</h4>
+                                                    <p>“Меня один раз 
+взломали, и скачали эротические фото. Начали шантажировать, но благодаря
+ данному сайту я удалила все фото в сети.”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item active">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                 <!-- IMAGE -->
+                                                <img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/client_2.png" alt="">
+                                                <div class="testimonial_caption">
+                                                <!-- DESCRIPTION -->
+                                                    <h2>Максим Шуембаев</h2>
+                                                    <h4><span>Ссылки скрыты из-за</span> конфиденциальности</h4>
+                                                    <p>“Мои паспортные данные продовались в телеграмме, а данный сервис рассказал мне об этом и помог мне удалить эти данные из сети”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <!-- IMAGE -->
+                                                <img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/client_3.png" alt="">
+                                                <div class="testimonial_caption">
+                                                <!-- DESCRIPTION -->
+                                                    <h2>Светлана Третьякова</h2>
+                                                    <h4><span>Ссылки скрыты из-за</span> конфиденциальности</h4>
+                                                    <p>“Я даже не подозревала, что столько много информации было обо мне, ярада что нашла данный сайт и удалила все это. Спасибо.”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- END TESTIMONIAL SECTION -->
+
+
+
+<!-- =========================
+     START FEATURES
+============================== -->
+    <section id="FEATURES" class="features page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <!-- FEATURES SECTION TITLE -->
+                    <div class="section_title wow fadeIn" data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                        <h2>О ДАННЫХ</h2>
+                        <p>Мы указали лишь малую часть того, что могут сделать злоумышленники зная информацию о Вас. Мы поможем бороться со всем этим.</p>
+                    </div>
+                    <!-- END FEATURES SECTION TITLE -->
+                </div>
+            </div>
+        </div>
+
+        <div class="feature_inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 right_no_padding wow fadeInLeft" data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                        <!-- FEATURE -->
+
+                        <div class="left_single_feature">
+                            <!-- ICON -->
+                            <div><span class="pe-7s-cash"></span></div>
+
+                            <!-- FEATURE HEADING AND DESCRIPTION -->
+                            <h3>Взять микрозайм<span>/</span></h3>
+                            <p>Кредит конечно ни кто не даст, а вот взять займ в МФО очень даже просто, нужно лишь фото паспорта</p>
+                        </div>
+
+                        <!-- END SINGLE FEATURE -->
+
+
+                        <!-- FEATURE -->
+                        <div class="left_single_feature">
+                            <!-- ICON -->
+                            <div><span class="pe-7s-wallet"></span></div>
+
+                            <!-- FEATURE HEADING AND DESCRIPTION -->
+                            <h3>Создать счет<span>/</span></h3>
+                            <p>В каком-нибудь онлайн банке и отмывать через него незаконные деньги, а виноваты будете Вы</p>
+                        </div>
+                        <!-- END SINGLE FEATURE -->
+
+
+                        <!-- FEATURE -->
+                        <div class="left_single_feature">
+                            <!-- ICON -->
+                            <div><span class="pe-7s-film"></span></div>
+
+                            <!-- FEATURE HEADING AND DESCRIPTION -->
+                            <h3>Шантажировать<span>/</span></h3>
+                            <p>Найдя у Вас откровенные фото или видео, с Вас могут вымогать деньги</p>
+                        </div>
+                        <!-- END SINGLE FEATURE -->
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature_iphone">
+                            <!-- FEATURE PHONE IMAGE -->
+                            <img class="wow bounceIn" data-wow-duration="1s" src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/iPhone02.png" alt="" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                        </div>
+                    </div>
+                    <div class="col-md-4 left_no_padding wow fadeInRight" data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+
+                        <!-- FEATURE -->
+                        <div class="right_single_feature">
+                            <!-- ICON -->
+                            <div><span class="pe-7s-user"></span></div>
+
+                            <!-- FEATURE HEADING AND DESCRIPTION -->
+                            <h3><span>/</span>Обмануть друзей</h3>
+                            <p>Представляясь Вами, могут обмануть Ваших друзей или родных (например: занять денег)</p>
+                        </div>
+                        <!-- END SINGLE FEATURE -->
+
+
+                        <!-- FEATURE -->
+                        <div class="right_single_feature">
+                            <!-- ICON -->
+                            <div><span class="pe-7s-mail"></span></div>
+
+                            <!-- FEATURE HEADING AND DESCRIPTION -->
+                            <h3><span>/</span>Информация</h3>
+                            <p>Не всем нужны Ваши деньги, компромат могут разослать и просто так всем знакомым</p>
+                        </div>
+                        <!-- END SINGLE FEATURE -->
+
+
+                        <!-- FEATURE -->
+                        <div class="right_single_feature">
+                            <!-- ICON -->
+                            <div><span class="pe-7s-piggy"></span></div>
+
+                            <!-- FEATURE HEADING AND DESCRIPTION -->
+                            <h3><span>/</span>Продать данные</h3>
+                            <p>Хакер взломав Вас может просто продать ваши данные другому хакеру</p>
+                        </div>
+                        <!-- END SINGLE FEATURE -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END FEATURES SECTION -->
+
+
+
+<!-- =========================
+     START CALL TO ACTION
+============================== -->
+    <div class="call_to_action">
+        <div class="container">
+            <div class="row wow fadeInLeftBig" data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                <div class="col-md-9">
+                    <p>Не медлите, проверьте информацию сейчас! 
+Обезопасите себя и своих близких! Мы найдем все, что есть о Вас, а Вы 
+сами удалите при необходимости.</p>
+                </div>
+                <div class="col-md-3">
+                    <a class="btn btn-primary btn-action" href="#SEARCH" role="button">Проверить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END CALL TO ACTION -->
+
+
+<!-- =========================
+     Start APPS SCREEN SECTION
+============================== -->
+    <section class="apps_screen page" id="SCREENS">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 wow fadeInBig" data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                        <!-- APPS SCREEN TITLE -->
+                        <div class="section_title">
+                            <h2>Фото</h2>
+                            <p>Примеры найденного нами компромата</p>
+                        </div>
+                        <!-- END APPS SCREEN TITLE -->
+                    </div>
+                </div>
+            </div>
+
+        <div class="screen_slider">
+            <div id="demo" class="wow bounceInRight" data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                <div id="owl-demo" class="owl-carousel owl-theme" style="display: block; opacity: 1;">
+
+                    <!-- APPS SCREEN IMAGES -->
+                    <div class="owl-wrapper-outer"><div class="owl-wrapper" style="display: block; width: 5028px; left: 0px; transition: all 0ms ease 0s; transform: translate3d(-419px, 0px, 0px);"><div class="owl-item" style="width: 419px;"><div class="item">
+                    <a href="http://vkauth.ru/assets/f9A11jNdzD/images/orig_jK3Ey6Ip.jpg" rel="prettyPhoto[pp_gal]"><img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/orig_jK3Ey6Ip2.jpg" alt="APPS SCREEN" width="60" height="60"></a>
+                    </div></div><div class="owl-item" style="width: 419px;"><div class="item">
+                        <a href="http://vkauth.ru/assets/f9A11jNdzD/images/orig_uA2ebXbL.jpg" rel="prettyPhoto[pp_gal]"><img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/orig_uA2ebXbL.jpg" alt="APPS SCREEN" width="60" height="60"></a>
+                    </div></div><div class="owl-item" style="width: 419px;"><div class="item">
+                        <a href="http://vkauth.ru/assets/f9A11jNdzD/images/orig_VBPsVPeV.jpg" rel="prettyPhoto[pp_gal]"><img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/orig_VBPsVPeV.jpg" alt="APPS SCREEN" width="60" height="60"></a>
+                    </div></div><div class="owl-item" style="width: 419px;"><div class="item">
+                        <a href="http://vkauth.ru/assets/f9A11jNdzD/images/orig_nrvH2rOg.jpg" rel="prettyPhoto[pp_gal]"><img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/orig_nrvH2rOg.jpg" alt="APPS SCREEN" width="60" height="60"></a>
+                    </div></div><div class="owl-item" style="width: 419px;"><div class="item">
+                        <a href="http://vkauth.ru/assets/f9A11jNdzD/images/orig_M8DHkdul.jpg" rel="prettyPhoto[pp_gal]"><img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/orig_M8DHkdul.jpg" alt="APPS SCREEN" width="60" height="60"></a>
+                    </div></div><div class="owl-item" style="width: 419px;"><div class="item">
+                        <a href="http://vkauth.ru/assets/f9A11jNdzD/images/orig_V75U7eSF.jpg" rel="prettyPhoto[pp_gal]"><img src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/orig_V75U7eSF.jpg" alt="APPS SCREEN" width="60" height="60"></a>
+                    </div></div></div></div>
+                    
+                    
+                    
+                    
+                    
+                <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ENS APPS SCREEN -->
+
+
+
+
+
+<!-- =========================
+     Start FUN FACTS
+============================== -->
+
+
+    <section class="fun_facts parallax">
+        <div class="section_overlay">
+            <div class="container wow bounceInLeft" data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="single_fun_facts">
+                            <i class="pe-7s-cloud-download"></i>
+                            <h2><span class="counter_num">157948</span> <span>+</span></h2>
+                            <p>Скачиваний</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single_fun_facts">
+                            <i class="pe-7s-look"></i>
+                            <h2><span class="counter_num">9945478</span> <span>+</span></h2>
+                            <p>Найдено компромата</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single_fun_facts">
+                            <i class="pe-7s-comment"></i>
+                            <h2><span class="counter_num">1448132</span> <span>+</span></h2>
+                            <p>Удаленно</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single_fun_facts">
+                            <i class="pe-7s-cup"></i>
+                            <h2><span class="counter_num">1000</span> <span>+</span></h2>
+                            <p>Отзывов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END FUN FACTS -->
+
+
+
+
+<!-- =========================
+     START DOWNLOAD NOW
+============================== -->
+
+    <!-- END DOWNLOAD -->
+
+<!-- =========================
+     START CONTCT FORM AREA
+============================== -->
+
+    <!-- END CONTACT -->
+
+<!-- =========================
+     Start Subscription Form
+============================== -->
+
+
+
+    <section class="subscribe parallax subscribe-parallax" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+        <div class="section_overlay wow lightSpeedIn" style="visibility: hidden; animation-name: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+
+                        <!-- Start Subscribe Section Title -->
+                        <div class="section_title">
+                            <h2>Проверка через ссылку на профиль vk.com</h2>
+
+                        </div>
+                        <!-- End Subscribe Section Title -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="SEARCH">
+                <div class="row  wow lightSpeedIn" style="visibility: hidden; animation-name: none;">
+                    <div class="col-md-6 col-md-offset-3">
+                        <!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
+                        <div class="subscription-success"></div>
+                        <div class="subscription-error"></div>
+                        <!-- Check this topic on how to add email subscription list, http://kb.mailchimp.com/lists/signup-forms/host-your-own-signup-forms -->
+
+                                                <form id="mc-form" action="./find.html" method="GET" class="subscribe_form">
+                        
+                            <input type="hidden" name="u" value="6908378c60c82103f3d7e8f1c">
+                            <input type="hidden" name="id" value="8c5074025d">
+                                <div class="form-group">
+                                    <!-- EMAIL INPUT BOX -->
+                                    <input type="text" autocapitalize="none" autocorrect="off" name="MERGE0" required="" class="required email form-control" id="mce-EMAIL" placeholder="vk.com/id325455">
+                                </div>
+                                    <!-- SUBSCRIBE BUTTON -->
+                                <button type="submit" class="btn btn-default subs-btn">Проверить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END SUBSCRIPBE FORM -->
+
+
+<!-- =========================
+     FOOTER
+============================== -->
+
+    <section class="copyright">
+        <h2></h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copy_right_text">
+                    <!-- COPYRIGHT TEXT -->
+                        <p>Copyright © 2020-2021. All Rights Reserved.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="scroll_top">
+                        <a href="#HOME"><i class="fa fa-angle-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END FOOTER -->
+
+
+<!-- =========================
+     SCRIPTS
+============================== -->
+
+
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/jquery.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/bootstrap.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/owl.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/jquery_007.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/smoothscroll.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/jquery_006.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/jquery_005.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/jquery_003.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/jquery_002.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/wow.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/waypoints.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/jquery_004.js"></script>
+    <script src="Detective-VK%20%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B0%20%D0%B2%20%D1%81%D0%B5%D1%82%D0%B8_files/script.js"></script>
+
+
+
+
+</body></html>
